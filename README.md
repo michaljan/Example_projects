@@ -1,4 +1,3 @@
 Example_projects
 ================
-
-Exampleprojects
+Projekt zawierajacy klasy testowe 
