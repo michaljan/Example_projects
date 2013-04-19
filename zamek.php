@@ -1,7 +1,9 @@
 class zamek{
-  private $czyOtwarty = true;
+	private $czyOtwarty = true;
 	
-	public function otworz(){
+	public function otworz($klucz){
+	
+		$this -> czyOtwarty = $klucz;
 		echo 'Czy twoj zamek jest otwary:: ' , $this ->czyOtwarty;
 	
 	}
@@ -11,4 +13,4 @@ class zamek{
 }
 
 $szafka = new zamek();
-$szafka -> otworz();
+$szafka -> otworz(0);
