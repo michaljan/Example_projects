@@ -36,11 +36,13 @@ $material = new sciany();
 
 $modelZofia = new dom($material,$rodzajDachu);
 
-$okna["Parter"] = "Kwadrat";
+//$okna["Parter"] = "Kwadrat";
 
-$okna["Pietro"] = "Prostokat";
+//$okna["Pietro"] = "Prostokat";
 
-$modelZofia -> dodajOkna($okna);
+//$modelZofia -> dodajOkna($okna);
+
+$modelZofia->okna["Parter"] = "Kwadrat"; //poprawnie
 
 echo "<pre>";
 
