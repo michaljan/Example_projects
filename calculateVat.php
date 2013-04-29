@@ -1,6 +1,6 @@
 class vat{
-  public $currentVat;
-	public function __constrct(){
+	public $currentVat;
+	public function __construct(){
 		$this -> currentVat = $currentVat;
 	}
 	public function setVat($currentVat){
@@ -16,7 +16,15 @@ class productPrice extends vat{
 	public function setPrice($product){
 		$this -> product = $product;
 	}
-	private function calculatePrice(){
-		$this -> endprice = $product * $currentVat;  
+	public function __construct(){
+		$this -> endprice = $this -> product * $this -> currentVat;  
+	}
+	public function getPrice(){
+		return $this -> endprice;
 	}
 } 
+$bread = new productPrice();
+$bread -> setVat(0.22);
+echo "Today vat is : ". $bread -> getVat();
+$bread -> setPrice(15);
+echo " and the bread price is: ". $bread -> getPrice();
