@@ -11,13 +11,19 @@ class vat{
 	}
 }
 class productPrice extends vat{
-	public $product=null;
+	public $product=0;
 	public $endprice=null;
 	public function setPrice($product){
 		$this -> product = $product;
 	}
-	public function __construct(){
-		$this -> endprice = $this -> product * $this -> currentVat;  
+	public function calculate(){
+		if (is_numeric($this->product)){
+			$this -> endprice = $this->product * $this->currentVat;
+		}
+		else{
+			echo "Please provide number"."<pre>";
+			
+		}
 	}
 	public function getPrice(){
 		return $this -> endprice;
@@ -26,6 +32,6 @@ class productPrice extends vat{
 $bread = new productPrice();
 $bread -> setVat(0.22);
 echo "Today vat is : ". $bread -> getVat();
-$bread -> setPrice(15);
+$bread -> setPrice(10);
+$bread -> calculate();
 echo " and the bread price is: ". $bread -> getPrice();
-
