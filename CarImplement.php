@@ -47,7 +47,7 @@ echo "BMW 363 has ". $BMW_363->steringWeelMaterial();
 echo " and ". $BMW_363->carBody();
 echo $BMW_363->carAge(10);
 
-$Toyota_Supra = new BMW();
+$Toyota_Supra = new Toyota();
 echo "</br> Toyota Supra has ". $Toyota_Supra->steringWeelMaterial();
 echo " and ". $Toyota_Supra->carBody();
 echo $Toyota_Supra->carAge(10);
